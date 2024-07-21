@@ -36,7 +36,7 @@ describe('App e2e', () => {
 
   describe('Auth', () => {
     const dto: AuthDto = {
-      email: 'isnaen@gmail.com',
+      email: 'nopal1@gmail.com',
       password: 'password123',
     };
 
@@ -119,9 +119,9 @@ describe('App e2e', () => {
     describe('Edit user', () => {
       it('Berhasil mengedit user!', () => {
         const dto: EditUserDto = {
-          firstName: 'Zulfikar',
-          lastName: 'Isnaen',
-          email: 'isnaen70@gmail.com',
+          firstName: 'Nouval',
+          lastName: 'Amrullah',
+          email: 'nopal1@gmail.com',
         };
         return pactum
           .spec()
