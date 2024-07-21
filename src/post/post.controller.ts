@@ -15,7 +15,10 @@ import { GetUser } from '../auth/decorator';
 import { JwtGuard } from '../auth/guards';
 import { CreatePostDto, EditPostDto } from './dto';
 import { PostService } from './post.service';
+import { ApiBearerAuth, ApiTags } from '@nestjs/swagger';
 
+@ApiBearerAuth('access-token')
+@ApiTags('posts')
 @UseGuards(JwtGuard)
 @Controller('posts')
 export class PostController {

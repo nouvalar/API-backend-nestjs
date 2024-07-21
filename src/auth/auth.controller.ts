@@ -14,8 +14,8 @@ export class AuthController {
     description: '{ "access_token": "token kamu nanti ada di sini"}',
   })
   @Post('signup')
-  signup(@Body() dto: AuthDto) {
-    return this.authService.signup(dto);
+  async signup(@Body() dto: AuthDto) {
+    return await this.authService.signup(dto);
   }
 
   @HttpCode(HttpStatus.OK)
@@ -25,7 +25,7 @@ export class AuthController {
     description: '{ "access_token": "token kamu nanti ada di sini"}',
   })
   @Post('signin')
-  signin(@Body() dto: AuthDto) {
-    return this.authService.signin(dto);
+  async signin(@Body() dto: AuthDto) {
+    return await this.authService.signin(dto);
   }
 }
